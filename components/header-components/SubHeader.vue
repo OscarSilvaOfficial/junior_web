@@ -7,3 +7,15 @@
     </div>
   </header>
 </template>
+<style scoped>
+header {
+  background-color: #1a1f26;
+  width: 100%;
+  margin-top: 66px;
+}
+
+header h1 {
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-800" id="nav-bar-menu">
+  <nav class="bg-gray-800 fixed" id="nav-bar-menu">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -8,6 +8,7 @@
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
+            @click="changeSideBarState()"
           >
             <span class="sr-only">Open main menu</span>
 
@@ -49,7 +50,7 @@
         >
           <div class="flex-shrink-0 flex items-center">
             <img
-              class="hidden lg:block h-8 w-auto"
+              class="lg:block h-8 w-auto"
               src="~/assets/junior-icon.png"
               alt="JR icon"
             />
@@ -59,9 +60,9 @@
               <a
                 href="#"
                 class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Home</a
+                >Feed</a
               >
-              <a
+              <!-- <a
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >menu-01</a
@@ -75,7 +76,7 @@
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >menu-03</a
-              >
+              > -->
             </div>
           </div>
         </div>
@@ -151,49 +152,72 @@
       </div>
     </div>
 
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a
-          href="#"
-          class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Dashboard</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Team</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Projects</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Calendar</a
-        >
+    <transition name="slide-fade">
+      <div class="sm:hidden" id="mobile-menu" v-show="showSideBar" re>
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Feed</a
+          >
+          <!-- <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Calendar</a
+          > -->
+        </div>
       </div>
-    </div>
+    </transition>
   </nav>
 </template>
+
+<style>
+#nav-bar-menu {
+  box-shadow: 0 4px 2px 0px black;
+  background-color: #161b22;
+  width: 100%;
+  top: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>
+
 <script>
 export default {
   data() {
     return {
+      showSideBar: false,
       showProfile: false
-    }
+    };
   },
 
   methods: {
+    changeSideBarState() {
+      this.showSideBar = this.showSideBar !== true;
+    },
+
     changeProfileState() {
-      this.showProfile = this.showProfile !== true
+      this.showProfile = this.showProfile !== true;
     }
   }
-}
+};
 </script>
-<style>
-#nav-bar-menu {
-  box-shadow: 0 4px 2px -2px gray;
-}
-</style>
