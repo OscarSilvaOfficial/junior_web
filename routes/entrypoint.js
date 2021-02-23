@@ -6,7 +6,7 @@ axios.defaults.headers.common['Authorization'] = `Basic ${Base64.encode('admin:a
 console.log(axios.defaults.headers.common)
 
 const base = axios.create({
-  baseURL: 'http://localhost:8000/'
+  baseURL: process.env.JUNIOR_API
 })
 
 export { base }
