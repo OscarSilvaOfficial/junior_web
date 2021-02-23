@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build1": "nuxt build --output public",
+    "build": "nuxt build",
     "start": "nuxt start",
-    "build": "nuxt generate"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
@@ -16,7 +16,6 @@
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
-    "@nuxtjs/google-fonts": "^1.2.0",
     "@nuxtjs/tailwindcss": "^3.4.2"
   }
 }
