@@ -17,7 +17,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/main.css'
+    '~/static/css/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -25,7 +25,7 @@ export default {
   ],
 
   target: 'static',
-  
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
