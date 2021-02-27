@@ -28,24 +28,6 @@ export default {
       type: 'image/png',
       href: '/img/junior-icon-medium.png'
     }],
-  },
-
-  css: [
-    '~/static/css/main.css'
-  ],
-
-  plugins: [],
-
-  target: 'static',
-
-  components: true,
-
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa',
-  ],
-
-  pwa: {
     icons: [
       {
         src: '/img/junior-icon-medium.png',
@@ -64,6 +46,24 @@ export default {
         purpose: "maskable"
       }
     ],
+  },
+
+  css: [
+    '~/static/css/main.css'
+  ],
+
+  plugins: [],
+
+  target: 'static',
+
+  components: true,
+
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa',
+  ],
+
+  pwa: {
     manifest: {
       name: 'Help a Junior',
       short_name: 'HAJJ',
