@@ -28,25 +28,6 @@ export default {
       type: 'image/png',
       href: '/img/junior-icon-medium.png'
     }],
-    icons: [
-      {
-        src: '/img/junior-icon-medium.png',
-        sizes: "192x192",
-        type:"image/png"
-      },
-      {
-        src: '/img/junior-icon.png',
-        sizes: "512x512",
-        type:"image/png"
-      },
-      {
-        src: "/img/maskable_icon.png",
-        sizes: "192x192",
-        type: "image/png",
-        purpose: "maskable"
-      }
-    ],
-  },
 
   css: [
     '~/static/css/main.css'
@@ -73,7 +54,26 @@ export default {
       lang: 'pt-BR',
       display: "standalone",
       useWebmanifestExtension: true
-    }
+    },
+    icon: [
+      {
+        src: '/img/junior-icon-medium.png',
+        sizes: "192x192",
+        type:"image/png"
+      },
+      {
+        src: '/img/junior-icon.png',
+        sizes: "512x512",
+        type:"image/png"
+      },
+      {
+        src: "/img/maskable_icon.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable"
+      }
+    ],
+  },
   },
 
   env: {
