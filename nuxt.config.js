@@ -28,6 +28,7 @@ export default {
       type: 'image/png',
       href: '/img/junior-icon-medium.png'
     }],
+  },
 
   css: [
     '~/static/css/main.css'
@@ -45,17 +46,7 @@ export default {
   ],
 
   pwa: {
-    manifest: {
-      name: 'Help a Junior',
-      short_name: 'HAJJ',
-      background_color: "#e2e8f0",
-      theme_color: '#e2e8f0',
-      description: 'Como todo junior, é sempre difícil conseguir um primeiro emprego, mas vou estar com você nessa jornada',
-      lang: 'pt-BR',
-      display: "standalone",
-      useWebmanifestExtension: true
-    },
-    icon: [
+    icons: [
       {
         src: '/img/junior-icon-medium.png',
         sizes: "192x192",
@@ -73,7 +64,16 @@ export default {
         purpose: "maskable"
       }
     ],
-  },
+    manifest: {
+      name: 'Help a Junior',
+      short_name: 'HAJJ',
+      background_color: "#e2e8f0",
+      theme_color: '#e2e8f0',
+      description: 'Como todo junior, é sempre difícil conseguir um primeiro emprego, mas vou estar com você nessa jornada',
+      lang: 'pt-BR',
+      display: "standalone",
+      useWebmanifestExtension: true
+    }
   },
 
   env: {
