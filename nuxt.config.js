@@ -22,6 +22,11 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/img/junior-favicon.png'
+    },
+    {
+      rel: 'apple-touch-icon',
+      type: 'image/png',
+      href: '/img/junior-icon-medium.png'
     }],
   },
 
@@ -41,29 +46,22 @@ export default {
   ],
 
   pwa: {
-    meta: {
-      link: [{
-        rel: 'apple-touch-icon',
-        type: 'image/png',
-        href: '/img/junior-icon-medium.png'
-      }],
-    },
     icons: [
       {
-        src: '~/static/img/junior-icon-medium.png',
+        src: '/img/junior-icon-medium.png',
         sizes: "192x192",
         type:"image/png"
       },
       {
-        src: '~/static/img/junior-icon.png',
+        src: '/img/junior-icon.png',
         sizes: "512x512",
         type:"image/png"
       },
       {
-        src: "~/static/img/maskable_icon.png",
+        src: "/img/maskable_icon.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "any maskable"
+        purpose: "maskable"
       }
     ],
     manifest: {
