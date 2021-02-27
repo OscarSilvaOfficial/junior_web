@@ -46,7 +46,10 @@ export default {
   ],
 
   pwa: {
-    icon: [
+    icon: {
+      fileName: "junior-icon.png",
+      targetDit: "img/"
+    }/* [
       {
         src: '/img/junior-icon-medium.png',
         sizes: "192x192",
@@ -63,7 +66,7 @@ export default {
         type: "image/png",
         purpose: "maskable"
       }
-    ],
+    ], */
     manifest: {
       name: 'Help a Junior',
       short_name: 'HAJJ',
