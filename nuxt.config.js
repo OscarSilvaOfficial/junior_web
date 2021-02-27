@@ -48,7 +48,7 @@ export default {
   pwa: {
     icon: {
       fileName: "junior-icon.png",
-      targetDit: "img/"
+      targetDit: "./static/img/"
     },/* [
       {
         src: '/img/junior-icon-medium.png',
