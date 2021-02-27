@@ -1,5 +1,5 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  
   head: {
     title: 'Ajude um júnior',
     htmlAttrs: {
@@ -11,31 +11,73 @@ export default {
       { hid: 'description', name: 'description', content: 'Se você é junior, eu quero te ajudar.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/img/junior-favicon.png' }
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/static/css/main.css'
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
   target: 'static',
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa',
   ],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  pwa: {
+    icon: {
+      iconScr:'./static/img/junior-icon.png',
+    },
+    manifest: {
+      name: 'Help a Junior',
+      short_name: 'HAJJ', 
+      description: 'Como todo junior, é sempre difícil conseguir um primeiro emprego, mas vou estar com você nessa jornada',
+      lang: 'pt-BR',
+      useWebmanifestExtension: true
+    }
+  },
+
+  env: {
+    authUser: process.env.JUNIOR_USER,
+    authPass: process.env.JUNIOR_PASS,
+    baseUrl: process.env.DEBUG == 'True' ? 'http://localhost:8000/':'https://junior-api.herokuapp.com/'
+  },
+
   build: {
+  },
+
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://fonts.gstatic.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://cdn.snipcart.com/.*',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      }
+    ]
   }
 }

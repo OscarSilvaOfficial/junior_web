@@ -129,7 +129,6 @@ export default {
 
   async mounted() {
     this.user = await getPostUser(this.post.user_id).then(res => res.data)
-    console.log(this.user)
   },
 
   data() {

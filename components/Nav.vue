@@ -51,7 +51,7 @@
           <div class="flex-shrink-0 flex items-center">
             <img
               class="lg:block h-8 w-auto"
-              src="~/assets/junior-icon.png"
+              src="/img/junior-icon.png"
               alt="JR icon"
             />
           </div>

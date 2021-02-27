@@ -1,16 +1,13 @@
 import axios from 'axios'
 import { Base64 } from 'js-base64';
 
-axios.defaults.headers.common['Authorization'] = `Basic ${Base64.encode('admin:admin')}`
+const USER = process.env.authUser
+const PASS = process.env.authPass
 
-const DEBUG = process.env.DEBUG
-
-const baseURL = DEBUG == 'True' ? 'http://localhost:8000/':'https://junior-api.herokuapp.com/'
-
-console.log(baseURL)
+axios.defaults.headers.common['Authorization'] = `Basic ${Base64.encode(`${USER}:${PASS}`)}`
 
 const base = axios.create({
-  baseURL: baseURL
+  baseURL: process.env.baseUrl
 })
 
 
