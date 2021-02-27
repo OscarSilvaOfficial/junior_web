@@ -49,7 +49,7 @@ export default {
     icon: {
       fileName: "junior-icon.png",
       targetDit: "img/"
-    }/* [
+    },/* [
       {
         src: '/img/junior-icon-medium.png',
         sizes: "192x192",
