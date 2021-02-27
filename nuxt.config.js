@@ -22,11 +22,6 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/img/junior-favicon.png'
-    },
-    {
-      rel: 'apple-touch-icon',
-      type: 'image/png',
-      href: '/img/junior-icon-medium.png'
     }],
   },
 
@@ -46,6 +41,13 @@ export default {
   ],
 
   pwa: {
+    meta: {
+      link: [{
+        rel: 'apple-touch-icon',
+        type: 'image/png',
+        href: '/img/junior-icon-medium.png'
+      }],
+    },
     icons: [
       {
         src: '~/static/img/junior-icon-medium.png',
@@ -61,7 +63,7 @@ export default {
         src: "~/static/img/maskable_icon.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "Junior Icon Makeble"
+        purpose: "any maskable"
       }
     ],
     manifest: {
@@ -71,6 +73,7 @@ export default {
       theme_color: '#e2e8f0',
       description: 'Como todo junior, é sempre difícil conseguir um primeiro emprego, mas vou estar com você nessa jornada',
       lang: 'pt-BR',
+      display: "standalone",
       useWebmanifestExtension: true
     }
   },
