@@ -47,7 +47,7 @@ export default {
 
   pwa: {
     icon: {
-      source: '/img/junior-icon.png'
+      source: './static/img/junior-icon.png'
     },
     manifest: {
       name: 'Help a Junior',
