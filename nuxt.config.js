@@ -46,14 +46,14 @@ export default {
   ],
 
   pwa: {
-    icon: [
+    icons: [
       {
         src: '/img/junior-icon-medium.png',
         sizes: "192x192",
         type:"image/png"
       },
       {
-        src: '/img/junior-icon.png',
+        src: './static/img/junior-icon.png',
         sizes: "512x512",
         type:"image/png"
       },
