@@ -45,11 +45,25 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-  icon: {
-    iconSrc: "./static/img/junior-icon.png"
-  },
-
   pwa: {
+    icon: [
+      {
+        src: '/img/junior-icon-medium.png',
+        sizes: "192x192",
+        type:"image/png"
+      },
+      {
+        src: '/img/junior-icon.png',
+        sizes: "512x512",
+        type:"image/png"
+      },
+      {
+        src: "/img/maskable_icon.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable"
+      }
+    ],
     manifest: {
       name: 'Help a Junior',
       short_name: 'HAJJ',
