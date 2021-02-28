@@ -53,7 +53,7 @@ export default {
         type:"image/png"
       },
       {
-        src: './static/img/junior-icon.png',
+        src: '~/static/img/junior-icon.png',
         sizes: "512x512",
         type:"image/png"
       },
