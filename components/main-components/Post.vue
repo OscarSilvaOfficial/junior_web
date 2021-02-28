@@ -9,14 +9,14 @@
         />
       </figure>
       <div class="px-4 py-5 sm:px-6">
-        <h3 class="text-lg leading-6 font-medium text-white">
+        <h2 class="text-lg leading-6 font-medium text-white">
           <span v-if="user.first_name && user.last_name">
             {{ user.first_name }} {{ user.last_name }}
           </span>
           <span v-else>
             {{ user.username }}
           </span>
-        </h3>
+        </h2>
         <p class="mt-1 max-w-2xl text-sm text-gray-500">
           {{ post.tags }}
         </p>
